@@ -1,0 +1,132 @@
+/* Reset dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(83, 15, 77, 0.8), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.banner-title {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Form Kirim Pesan */
+.contact-form {
+    padding: 50px 20px;
+    text-align: left;
+    margin-left: 300px;
+    background-color: #ffffff;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 80px;
+    color: #472545;
+}
+
+.contact-form form {
+    max-width: 1000px;
+    margin: 10 auto;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.contact-form .form-item {
+    flex: 1;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.2em;
+    color: #472545;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 85%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none; /* Hilangkan border */
+    border-bottom: 2px solid #ccc; /* Hanya garis bawah */
+    border-radius: 0; /* Hilangkan radius */
+    font-size: 1em;
+    background: transparent;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #472545; /* Ubah warna garis bawah saat fokus */
+}
+
+.contact-form textarea {
+    resize: none; /* Nonaktifkan resize */
+}
+
+.contact-form .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Tombol Kirim Pesan */
+.contact-form .submit-btn {
+    padding: 15px 50px;
+    background: linear-gradient(to right, #472545, #4e96f5);
+    color: white;
+    border: none;
+    border-radius: 25px; /* Membuat tombol oval */
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.contact-form .submit-btn:hover {
+    background: linear-gradient(to right, #4e96f5, #472545);
+}
+
+/* Garis Pemisah */
+.divider {
+    border: 0; /* Menghapus border default */
+    border-top: 1px solid #e3e3e3; /* Menambahkan garis tipis berwarna ungu gelap */
+    margin: 100px auto; /* Memberikan jarak atas dan bawah */
+    width: 80%; /* Mengatur lebar garis agar tidak terlalu lebar */
+}

@@ -1,0 +1,581 @@
+/* Reset dasar untuk body dan html */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header dengan gradasi */
+header {
+    position: sticky;  /* Membuat header tetap mengikuti saat di-scroll */
+    top: 0; /* Menempel di bagian atas */
+    width: 100%; /* Memastikan lebar header mencakup seluruh layar */
+    z-index: 1000; /* Menjaga header tetap di atas konten lain */
+    background-color: #fff; /* Pastikan ada warna latar belakang untuk menghindari elemen transparan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada header untuk efek depth */
+    background: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru tua */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+/* Memperbesar tulisan "Klug" */
+.header .logo {
+    font-size: 3em;  /* Ukuran font yang lebih besar */
+    font-weight: bold;  /* Menebalkan teks */
+    color: #ffffff; /* Warna teks */
+    margin-left: 130px; /* Menggeser teks 20px ke kanan */
+}
+/* Logo dengan efek garis */
+.logo {
+    position: relative; /* Dibutuhkan untuk posisi elemen pseudo */
+    font-size: 3em; /* Ukuran font besar */
+    font-weight: bold; /* Teks tebal */
+    color: white; /* Warna teks */
+    text-transform: lowercase; /* Huruf kecil */
+    text-align: center; /* Rata tengah */
+}
+
+/* Garis di atas dan bawah huruf menggunakan pseudo-elemen */
+.logo::before{
+    content: ""; /* Membuat elemen kosong untuk garis */
+    position: absolute;
+    width: 53%; /* Panjang garis sama dengan teks */
+    height: 2.3px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    left: 45%;
+}
+.logo::after {
+    content: ""; /* Membuat elemen kosong untuk garis */
+    position: absolute;
+    width: 65%; /* Panjang garis sama dengan teks */
+    height: 2.3px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    left: 0;
+}
+
+.logo::before {
+    top: 10px; /* Jarak garis atas dari teks */
+}
+
+.logo::after {
+    bottom: 3px; /* Jarak garis bawah dari teks */
+}
+
+/* Memberikan jarak antara logo dan menu navigasi */
+nav {
+    margin-left: 50px; /* Tambahkan jarak antara "Klug" dan menu */
+}
+
+/* Menata daftar menu */
+nav ul {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0;
+    display: flex; /* Mengatur elemen menu dalam satu baris */
+    gap: 30px; /* Memberikan jarak antar menu */
+}
+
+/* Menata setiap item menu */
+nav ul li a {
+    color: white; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-size: 16px; /* Ukuran font menu */
+}
+
+
+/* Kontainer utama untuk input dan tombol */
+.daftar {
+    display: flex; /* Atur elemen secara horizontal */
+    align-items: center; /* Meratakan elemen secara vertikal */
+    gap: 50px; /* Jarak antara pencarian dan tombol */
+    margin: 10px auto; /* Posisi tengah horizontal */
+    max-width: 600px; /* Lebar maksimum kontainer */
+}
+
+/* Kontainer utama untuk search bar */
+.search-bar {
+    display: flex;
+    justify-content: center; /* Untuk memposisikan elemen di tengah */
+    align-items: center; /* Meratakan secara vertikal */
+    background: linear-gradient(90deg, rgba(0, 150, 255, 0.8), rgba(0, 80, 255, 0.6)); /* Gradasi biru */
+    padding: 15px; /* Jarak luar untuk kontainer */
+    border-radius: 25px; /* Membuat sudut oval */
+    width: 350px; /* Lebar kotak pencarian */
+    margin: auto; /* Memposisikan elemen di tengah halaman */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+}
+
+/* Kontainer input dan ikon */
+.search-container {
+    display: flex;
+    align-items: center; /* Meratakan ikon dan input secara vertikal */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Garis bawah */
+    padding-bottom: 10px; /* Jarak dari teks ke garis bawah */
+    width: 100%; /* Memastikan mengambil seluruh lebar */
+}
+
+/* Ikon pencarian */
+.search-icon {
+    width: 20px; /* Ukuran ikon */
+    height: 20px; /* Ukuran ikon */
+    color: rgba(255, 255, 255, 0.8); /* Warna ikon putih transparan */
+    margin-right: 10px; /* Jarak antara ikon dan input */
+    flex-shrink: 0; /* Pastikan ikon tidak mengecil */
+}
+
+/* Input pencarian */
+.search-container input {
+    border: none; /* Hilangkan border default */
+    background: transparent; /* Latar belakang transparan */
+    outline: none; /* Hilangkan outline saat fokus */
+    font-size: 14px; /* Ukuran teks */
+    color: white; /* Warna teks */
+    flex: 1; /* Input mengambil ruang yang tersedia */
+}
+
+/* Placeholder untuk input */
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Warna placeholder putih dengan transparansi */
+    font-size: 20px; /* Ukuran placeholder sama seperti teks */
+}
+
+
+/* Ikon pencarian */
+.search-container .search-icon {
+    font-size: 20px; /* Ukuran ikon */
+    color: white; /* Warna ikon */
+    margin-left: 20px; /* Jarak antara ikon dan input */
+}
+
+/* Tombol Daftar Online */
+.daftar button {
+    padding: 15px 20px; /* Jarak dalam tombol */
+    background-color: #2e53b8; /* Warna latar belakang tombol */
+    border: none; /* Hilangkan border */
+    color: white; /* Warna teks */
+    cursor: pointer;
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    font-size: 14px; /* Ukuran teks */
+    font-weight: normal; /* Teks tebal */
+    white-space: nowrap; /* Pastikan teks dalam tombol tidak terpotong */
+    flex-shrink: 0; /* Mencegah tombol mengecil jika ruang terbatas */
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover untuk tombol */
+.daftar button:hover {
+    background-color: #0839a3; /* Warna tombol saat hover */
+}
+
+
+/* Banner */
+.banner {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 770px; /* Membuat banner lebih tinggi */
+    overflow: hidden;
+    z-index: 140; /* Memastikan banner tetap di atas konten lain */
+}
+
+/* Menjaga gambar agar memenuhi area */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjamin gambar memenuhi area tanpa distorsi */
+}
+
+.banner-text {
+    display: flex; /* Atur sebagai flexbox */
+    justify-content: space-between; /* Memisahkan elemen ke kiri dan kanan */
+    align-items: center; /* Rata tengah secara vertikal */
+    position: absolute;
+    bottom: 100px; /* Jarak dari bawah */
+    left: 150px; /* Jarak dari kiri */
+    color: white;
+    background: linear-gradient(90deg, rgba(36, 0, 58, 0.8), rgba(31, 121, 255, 0.8));
+    padding: 40px 50px;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 800px; /* Sesuaikan lebar */
+}
+
+.banner-text h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0;
+    flex: 1; /* Biarkan teks mengambil lebih banyak ruang */
+}
+
+.banner-text button {
+    padding: 15px 35px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: normal;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    flex: 0 0 auto; /* Pastikan tombol tidak melar */
+    margin-left: 60px; /* Tambahkan margin kiri untuk menggeser tombol ke kanan */
+    font-size: 20px;
+}
+
+.banner-text button:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer dengan gradasi */
+footer {
+    background: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru tua */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Section Tentang Kami */
+.about {
+    padding: 50px 20px; /* Jarak di dalam section */
+    text-align: center; /* Rata tengah */
+    background-color: #ffffff; /* Warna latar belakang terang */
+    color: #333; /* Warna teks */
+    font-size: 20px;
+}
+
+.about h2 {
+    font-size: 1.65em; /* Ukuran judul lebih besar */
+    margin-bottom: 40px; /* Jarak bawah judul */
+    font-weight: normal; /* Menebalkan judul */
+    color: #5d4c4c; /* Warna ungu gelap */
+}
+
+.about p {
+    font-size: 1.2em; /* Ukuran teks paragraf */
+    line-height: 1.6; /* Spasi antar baris */
+    max-width: 800px; /* Batas lebar paragraf */
+    margin: 0 auto; /* Pusatkan paragraf */
+    color: #6d6d6d; /* Warna teks abu-abu gelap */
+}
+
+/* Garis Pemisah */
+.divider {
+    border: 0; /* Menghapus border default */
+    border-top: 1px solid #e3e3e3; /* Menambahkan garis tipis berwarna ungu gelap */
+    margin: 30px auto; /* Memberikan jarak atas dan bawah */
+    width: 80%; /* Mengatur lebar garis agar tidak terlalu lebar */
+}
+
+/* Section Layanan Kami */
+.services {
+    padding: 50px 200px;
+    background-color: #ffffff; /* Warna latar belakang putih */
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 1.65em; /* Ukuran judul lebih besar */
+    margin-bottom: 70px; /* Jarak bawah judul */
+    font-weight: normal; /* Menghilangkan efek bold */
+    color: #5d4c4c; /* Warna ungu gelap */
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout grid responsif */
+    gap: 20px; /* Jarak antar item */
+}
+
+.service-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Efek zoom pada gambar saat hover */
+}
+
+.service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar gambar memenuhi area tanpa distorsi */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.service-item::before {
+    content: ''; /* Menambahkan overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%; /* Lebar bayangan ungu di sisi kiri */
+    background: linear-gradient(to right, rgb(70, 29, 112), transparent); /* Bayangan ungu */
+    z-index: 1;
+}
+
+.service-item p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Section Mitra Kami */
+.partners {
+    padding: 50px 100px; /* Jarak di dalam section */
+    background-color: #ffffff; /* Latar belakang abu-abu terang */
+    text-align: center;
+    margin: 0 200px; /* Menambahkan margin di kiri dan kanan untuk memberi ruang */
+}
+
+.partners h2 {
+    font-size: 1.65em;
+    font-weight: normal;
+    margin-bottom: 70px;
+    color: #5a4646; /* Warna hitam */
+}
+
+.partners-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* dua kolom */
+    gap: 34px; /* Jarak antar gambar */
+    justify-items: center; /* Agar gambar terpusat */
+}
+
+.partner-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    transition: transform 0.3s ease;
+}
+
+.partner-item img:hover {
+    transform: scale(1.14); /* Efek zoom pada gambar mitra saat hover */
+}
+
+
+/* Call to Action */
+.cta {
+    background: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru */
+    padding: 5px 40px;
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 50px; /* Memberikan jarak antara CTA dan footer */
+    border-radius: 10px;
+    display: flex; /* Menggunakan flexbox untuk mengatur posisi elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    justify-content: space-between; /* Menyebarkan elemen dengan tombol di kanan */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+}
+
+.cta p {
+    font-size: 1.5em; /* Ukuran font untuk judul */
+    margin-bottom: 10px; /* Memberikan jarak antar teks */
+    font-weight: normal;
+}
+
+.cta p:nth-of-type(2) {
+    font-size: 1em; /* Ukuran font yang lebih kecil untuk teks kedua */
+    margin-bottom: 20px; /* Memberikan jarak di bawah teks */
+}
+
+/* Menata tombol */
+.cta button {
+    padding: 15px 50px;
+    background-color: transparent; /* Latar belakang transparan */
+    color: transparent; /* Membuat teks transparan agar gradasi terlihat */
+    font-size: 1em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Membuat border transparan untuk tombol */
+    cursor: pointer;
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    background-image: linear-gradient(to right, #ffffff, #ffffff); /* Gradasi dari ungu ke biru pada teks */
+    background-clip: text; /* Menerapkan gradasi ke teks */
+    cursor: pointer;
+    border: 2px solid #ffffff; /* Menambahkan border dengan warna putih */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta button:hover {
+    background-color: #ffffff;
+    color: rgb(204, 204, 204);
+}
+
+.cta button::after {
+    content: ' ▼';
+    font-size: 12px;
+    margin-left: 25px;
+}
+
+/* Section Artikel Terbaru */
+.articles {
+    padding: 50px 20px; /* Jarak di dalam section */
+    background-color: #ffffff; /* Latar belakang putih */
+    text-align: center;
+}
+
+.articles h2 {
+    font-size: 1.65em; /* Ukuran judul lebih besar */
+    margin-bottom: 80px; /* Jarak bawah judul */
+    font-weight: normal;
+    color: #633e3e; /* Warna ungu gelap */
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Dua kolom */
+    gap: 30px; /* Jarak antar gambar */
+    justify-items: center; /* Agar gambar terpusat */
+}
+
+.article-item {
+    position: relative;
+    text-align: center;
+}
+
+.article-item img {
+    width: 100%;
+    height: 300px; /* Tetapkan tinggi gambar tetap */
+    object-fit: cover; /* Agar gambar memenuhi area tanpa distorsi */
+    border-radius: 10px; /* Sudut melengkung pada gambar */
+    transition: transform 0.3s ease;
+}
+
+.article-item:hover img {
+    transform: scale(1.05); /* Efek zoom pada gambar saat hover */
+}
+
+.article-item p {
+    margin-top: 10px; /* Memberikan jarak antara gambar dan teks */
+    font-size: 1.2em;
+    color: #000000; /* Warna teks ungu gelap */
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Tombol Artikel Lainnya */
+.view-more-container {
+    margin-top: 10px; /* Memberikan jarak antara artikel dan tombol */
+    text-align: center; /* Menyelaraskan tombol di tengah */
+}
+
+.view-more-btn {
+    padding: 14px 42px;
+    background-color: transparent; /* Latar belakang transparan */
+    color: transparent; /* Membuat teks transparan agar gradasi terlihat */
+    font-size: 1em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Membuat border transparan untuk tombol */
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    background-image: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru pada teks */
+    background-clip: text; /* Menerapkan gradasi ke teks */
+    cursor: pointer;
+    border: 2px solid #4e96f5; /* Menambahkan border dengan warna biru */
+}
+
+/* Garis Pemisah */
+.divider {
+    border: 0; /* Menghapus border default */
+    border-top: 1px solid #e3e3e3; /* Menambahkan garis tipis berwarna ungu gelap */
+    margin: 30px auto; /* Memberikan jarak atas dan bawah */
+    width: 80%; /* Mengatur lebar garis agar tidak terlalu lebar */
+}
+
+/* Section Hubungi Kami */
+.contact {
+    padding: 50px 20px; /* Jarak di dalam section */
+    background-color: #ffffff; /* Latar belakang putih */
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: normal;
+    color: #472545; /* Warna ungu gelap */
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #472545;
+    margin: 10px 0;
+}
+
+.contact-buttons {
+    margin-top: 50px;
+}
+
+/* Tombol Kirim Pesan */
+.contact-btn {
+    padding: 12px 45px;
+    background-color: transparent; /* Latar belakang transparan */
+    color: transparent; /* Membuat teks transparan agar gradasi terlihat */
+    font-size: 1.2em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Membuat border transparan untuk tombol */
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    background-image: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru pada teks */
+    background-clip: text; /* Menerapkan gradasi ke teks */
+    cursor: pointer;
+    border: 2px solid #4e96f5; /* Menambahkan border dengan warna biru */
+}
+
+/* Tombol Lokasi Kami */
+#lokasi-kami {
+    padding: 12px 50px;
+    background: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru */
+    color: white; /* Warna teks putih */
+    font-size: 1.1em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Border transparan untuk tombol */
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    cursor: pointer;
+}
+
+/* Banner Paling Bawah */
+.footer-banner {
+    background: linear-gradient(to right, #46074E, #197BD0); /* Gradasi dari ungu ke biru */
+    padding: 20px 0; /* Jarak atas dan bawah pada banner */
+    text-align: center;
+}
+
+.footer-banner h2 {
+    font-size: 1.2em;
+    color: white; /* Warna teks putih */
+    font-weight: bold;
+}
+
+/* Scrollbar Transparan */
+body::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar vertikal */
+    height: 8px; /* Tinggi scrollbar horizontal */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(142, 122, 122, 0.4); /* Warna transparan untuk thumb (bagian yang digerakkan) */
+    border-radius: 10px; /* Membuat sudut membulat */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(22, 22, 22, 0.7); /* Warna lebih terang saat hover */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent; /* Latar belakang scrollbar */
+}

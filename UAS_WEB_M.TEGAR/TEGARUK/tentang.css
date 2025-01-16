@@ -1,0 +1,195 @@
+/* Reset Dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner (khusus halaman Tentang Kami) */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Tinggi banner */
+    overflow: hidden; /* Untuk mencegah elemen keluar dari batas */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjamin gambar memenuhi area tanpa distorsi */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Pastikan gambar di bawah overlay dan teks */
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(83, 15, 77, 0.8), rgba(0, 0, 0, 0)); /* Overlay gradasi */
+    z-index: 1;
+}
+
+.banner-title {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2; /* Teks berada di atas overlay */
+}
+
+/* Profil */
+.profil {
+    padding: 50px 200px;
+    text-align: left;
+}
+
+.profil h2 {
+    font-size: 1.6  em;
+    font-weight: normal; /* Teks tebal */
+    color: #472545;
+    margin-bottom: 50px;
+}
+
+.profil p {
+    font-size: 1.2em;
+    color: #8a7f8a;
+    max-width: 800px;
+    margin: 0 ;
+    line-height: 1.6;
+    text-align: left; /* Pastikan paragraf juga rata kiri */
+}
+
+/* Kontainer Visi dan Misi */
+.visi-misi {
+    display: flex;
+    justify-content: space-between; /* Memberikan ruang di antara visi dan misi */
+    align-items: flex-start; /* Ratakan item secara vertikal */
+    padding: 50px 200px;
+    gap: 30px; /* Jarak antara dua kolom */
+}
+
+/* Gaya untuk setiap kolom (Visi dan Misi) */
+.visi-misi .visi, .visi-misi .misi {
+    width: 65%; /* Lebar masing-masing kolom */
+    text-align: left; /* Teks rata tengah */
+}
+
+.visi-misi .visi img, .visi-misi .misi img {
+    width: 100%; /* Gambar memenuhi lebar kolom */
+    border-radius: 10px; /* Sudut gambar membulat */
+    margin-bottom: 20px; /* Jarak antara gambar dan teks */
+}
+
+.visi-misi .visi h3, .visi-misi .misi h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #472545; /* Warna teks */
+    margin-bottom: 30px; /* Jarak antara judul dan paragraf */
+}
+
+.visi-misi .visi p, .visi-misi .misi p {
+    font-size: 1.1em;
+    color: #8d8d8d;
+    line-height: 1.8; /* Jarak antarbaris */
+}
+
+/* Tombol Layanan kami */
+.view-more-container {
+    margin-left: 200px; /* Memberikan jarak antara artikel dan tombol */
+    text-align: left; /* Menyelaraskan tombol di tengah */
+}
+
+.view-more-btn {
+    padding: 14px 42px;
+    background-color: transparent; /* Latar belakang transparan */
+    color: transparent; /* Membuat teks transparan agar gradasi terlihat */
+    font-size: 1em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Membuat border transparan untuk tombol */
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    background-image: linear-gradient(to right, #472545, #4e96f5); /* Gradasi dari ungu ke biru pada teks */
+    background-clip: text; /* Menerapkan gradasi ke teks */
+    cursor: pointer;
+    border: 2px solid #4e96f5; /* Menambahkan border dengan warna biru */
+}
+
+/* Garis Pemisah */
+.divider {
+    border: 0; /* Menghapus border default */
+    border-top: 1px solid #e3e3e3; /* Menambahkan garis tipis berwarna ungu gelap */
+    margin: 100px auto; /* Memberikan jarak atas dan bawah */
+    width: 80%; /* Mengatur lebar garis agar tidak terlalu lebar */
+}
+
+/* Section Hubungi Kami */
+.contact {
+    padding: 50px 20px; /* Jarak di dalam section */
+    background-color: #ffffff; /* Latar belakang putih */
+    text-align: center;
+    margin-top: -80px; /* Geser ke atas dengan margin negatif */
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: normal;
+    color: #472545; /* Warna ungu gelap */
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #472545;
+    margin: 10px 0;
+}
+
+.contact-buttons {
+    margin-top: 50px;
+}
+
+/* Tombol Kirim Pesan */
+.contact-btn {
+    padding: 12px 45px;
+    background-color: transparent; /* Latar belakang transparan */
+    color: transparent; /* Membuat teks transparan agar gradasi terlihat */
+    font-size: 1.2em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Membuat border transparan untuk tombol */
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    background-image: linear-gradient(to right, #472545, #4e96f5); /* Gradasi dari ungu ke biru pada teks */
+    background-clip: text; /* Menerapkan gradasi ke teks */
+    cursor: pointer;
+    border: 2px solid #4e96f5; /* Menambahkan border dengan warna biru */
+}
+
+/* Tombol Lokasi Kami */
+#lokasi-kami {
+    padding: 12px 50px;
+    background: linear-gradient(to right, #83417e, #4e96f5); /* Gradasi dari ungu ke biru */
+    color: white; /* Warna teks putih */
+    font-size: 1.1em;
+    font-weight: normal;
+    border: 2px solid transparent; /* Border transparan untuk tombol */
+    border-radius: 25px; /* Membuat tombol berbentuk oval */
+    cursor: pointer;
+}
+
+/* Banner Paling Bawah */
+.footer-banner {
+    background: linear-gradient(to right, #472545, #4e96f5); /* Gradasi dari ungu ke biru */
+    padding: 20px 0; /* Jarak atas dan bawah pada banner */
+    text-align: center;
+}
+
+.footer-banner h2 {
+    font-size: 1.2em;
+    color: white; /* Warna teks putih */
+    font-weight: bold;
+}
